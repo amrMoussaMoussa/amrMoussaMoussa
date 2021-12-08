@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpirUp - Story</title>
+    <title>SpirUp - GameCard</title>
     <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
 </head>
 <body>
@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#story.id">id</a></li><li class="variable"><a href="#story.imageurl">image​Url</a></li><li class="variable"><a href="#story.name">name</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gamecard.gamename">game​Name</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -33,11 +33,11 @@
         <article>
             <h1>
     <small>Structure</small>
-    <code class="name">Story</code>
+    <code class="name">Game​Card</code>
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">Story</span>:<span class="type">Codable</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">GameCard</span>:<span class="type">Codable</span></body></html></code></pre>
 </div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
@@ -52,12 +52,12 @@
  viewBox="0.00 0.00 872.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-112 868,-112 868,4 -4,4"/>
-<!-- Story -->
+<!-- GameCard -->
 <g id="node1" class="node structure current">
-<title>Story</title>
-<g id="a_node1"><a xlink:href="/Story" xlink:title="Story">
+<title>GameCard</title>
+<g id="a_node1"><a xlink:href="/GameCard" xlink:title="GameCard">
 <path fill="none" stroke="black" stroke-width="3" d="M528,-108C528,-108 336,-108 336,-108 330,-108 324,-102 324,-96 324,-96 324,-84 324,-84 324,-78 330,-72 336,-72 336,-72 528,-72 528,-72 534,-72 540,-78 540,-84 540,-84 540,-96 540,-96 540,-102 534,-108 528,-108"/>
-<text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">Story</text>
+<text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">GameCard</text>
 </a>
 </g>
 </g>
@@ -67,9 +67,9 @@
 <path fill="none" stroke="black" d="M528,-36C528,-36 336,-36 336,-36 330,-36 324,-30 324,-24 324,-24 324,-12 324,-12 324,-6 330,0 336,0 336,0 528,0 528,0 534,0 540,-6 540,-12 540,-12 540,-24 540,-24 540,-30 534,-36 528,-36"/>
 <text text-anchor="middle" x="432" y="-14.3" font-family="Menlo" font-size="14.00">Codable</text>
 </g>
-<!-- Story&#45;&gt;Codable -->
+<!-- GameCard&#45;&gt;Codable -->
 <g id="edge1" class="edge conformsTo">
-<title>Story&#45;&gt;Codable</title>
+<title>GameCard&#45;&gt;Codable</title>
 <path fill="none" stroke="black" d="M432,-71.7C432,-63.98 432,-54.71 432,-46.11"/>
 <polygon fill="black" stroke="black" points="435.5,-46.1 432,-36.1 428.5,-46.1 435.5,-46.1"/>
 </g>
@@ -77,7 +77,7 @@
 </svg>
 
 
-    <figcaption hidden>Inheritance graph for Story.</figcaption>
+    <figcaption hidden>Inheritance graph for GameCard.</figcaption>
 </figure>
         <h3>Conforms To</h3>
 <dl>
@@ -87,28 +87,12 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="story.id">
+        <div role="article" class="variable" id="gamecard.gamename">
     <h3>
-        <code><a href="#story.id">id</a></code>
+        <code><a href="#gamecard.gamename">game​Name</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">id</span>:<span class="type">String</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="story.imageurl">
-    <h3>
-        <code><a href="#story.imageurl">image​Url</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">imageUrl</span>:<span class="type">String</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="story.name">
-    <h3>
-        <code><a href="#story.name">name</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">name</span>:<span class="type">String</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">gameName</span>:<span class="type">String</span></body></html></code></pre>
 </div>
 </div>
     </section>
