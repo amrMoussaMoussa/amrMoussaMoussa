@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#user.userid">user​ID</a></li><li class="variable"><a href="#user.token">token</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#user.accesstoken">access​Token</a></li><li class="variable"><a href="#user.refreshtoken">refresh​Token</a></li><li class="variable"><a href="#user.firstname">first​Name</a></li><li class="variable"><a href="#user.lastname">last​Name</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -87,20 +87,36 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="user.userid">
+        <div role="article" class="variable" id="user.accesstoken">
     <h3>
-        <code><a href="#user.userid">user​ID</a></code>
+        <code><a href="#user.accesstoken">access​Token</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">userID</span>:<span class="type">String</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">accessToken</span>:<span class="type">String</span></body></html></code></pre>
 </div>
 </div>
-<div role="article" class="variable" id="user.token">
+<div role="article" class="variable" id="user.refreshtoken">
     <h3>
-        <code><a href="#user.token">token</a></code>
+        <code><a href="#user.refreshtoken">refresh​Token</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">token</span>:<span class="type">String</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">refreshToken</span>:<span class="type">String</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="user.firstname">
+    <h3>
+        <code><a href="#user.firstname">first​Name</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">firstName</span> :<span class="type">String</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="user.lastname">
+    <h3>
+        <code><a href="#user.lastname">last​Name</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">lastName</span>:<span class="type">String</span></body></html></code></pre>
 </div>
 </div>
     </section>
@@ -112,7 +128,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-12-13T16:18:02+0200">December 13, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-12-15T09:45:30+0200">December 15, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
