@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpirUp - FBUsersConnect</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SpirUp
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#fbusersconnect.init(fbtoken:)">init(FBToken:​)</a></li><li class="initializer"><a href="#fbusersconnect.init?(coder:)">init?(coder:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#fbusersconnect.friendcv">friend​CV</a></li><li class="variable"><a href="#fbusersconnect.facebooktoken">face​Book​Token</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#fbusersconnect.viewdidload()">view​Did​Load()</a></li><li class="function"><a href="#fbusersconnect.configureprogressbar()">configure​Progress​Bar()</a></li><li class="function"><a href="#fbusersconnect.configureheadline()">configure​Head​Line()</a></li><li class="function"><a href="#fbusersconnect.getfriendslist()">get​Friends​List()</a></li><li class="function"><a href="#fbusersconnect.continuetapped()">continue​Tapped()</a></li><li class="function"><a href="#fbusersconnect.showhometabbar()">show​Hometabbar()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">FBUsers​Connect</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">FBUsersConnect</span>:<a href="/SUOnBoardingBaseVC"><span class="type">SUOnBoardingBaseVC</span></a></body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="fbusersconnect.init(fbtoken:)">
+    <h3>
+        <code><a href="#fbusersconnect.init(fbtoken:)">init(FBToken:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">init</span>(<span class="variable">FBToken</span>:<span class="type">String</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="fbusersconnect.init?(coder:)">
+    <h3>
+        <code><a href="#fbusersconnect.init?(coder:)">init?(coder:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">required</span> <span class="keyword">init</span>?(<span class="variable">coder</span>: <span class="type">NSCoder</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="fbusersconnect.friendcv">
+    <h3>
+        <code><a href="#fbusersconnect.friendcv">friend​CV</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">friendCV</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="fbusersconnect.facebooktoken">
+    <h3>
+        <code><a href="#fbusersconnect.facebooktoken">face​Book​Token</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">faceBookToken</span> = <span class="string literal">"</span><span class="string literal"/><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="fbusersconnect.viewdidload()">
+    <h3>
+        <code><a href="#fbusersconnect.viewdidload()">view​Did​Load()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">viewDidLoad</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="fbusersconnect.configureprogressbar()">
+    <h3>
+        <code><a href="#fbusersconnect.configureprogressbar()">configure​Progress​Bar()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">configureProgressBar</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="fbusersconnect.configureheadline()">
+    <h3>
+        <code><a href="#fbusersconnect.configureheadline()">configure​Head​Line()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">configureHeadLine</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="fbusersconnect.getfriendslist()">
+    <h3>
+        <code><a href="#fbusersconnect.getfriendslist()">get​Friends​List()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">getFriendsList</span>() </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="fbusersconnect.continuetapped()">
+    <h3>
+        <code><a href="#fbusersconnect.continuetapped()">continue​Tapped()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">continueTapped</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="fbusersconnect.showhometabbar()">
+    <h3>
+        <code><a href="#fbusersconnect.showhometabbar()">show​Hometabbar()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">showHometabbar</span>() </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-12-20T11:57:23+0200">December 20, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
