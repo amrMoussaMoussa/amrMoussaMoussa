@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#moviecell.cellid">cell​ID</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#moviecell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#moviecell.prepareforreuse()">prepare​For​Reuse()</a></li><li class="function"><a href="#moviecell.setitem(item:)">set​Item(item:​)</a></li></ul></li></ol>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#moviecell.actornamelabel">actor​Name​Label</a></li><li class="variable"><a href="#moviecell.cellid">cell​ID</a></li><li class="variable"><a href="#moviecell.imagedownloadtask">image​Download​Task</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#moviecell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#moviecell.layoutsubviews()">layout​Subviews()</a></li><li class="function"><a href="#moviecell.prepareforreuse()">prepare​For​Reuse()</a></li><li class="function"><a href="#moviecell.setitem(item:)">set​Item(item:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -43,12 +43,28 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="moviecell.cellid">
+        <div role="article" class="variable" id="moviecell.actornamelabel">
+    <h3>
+        <code><a href="#moviecell.actornamelabel">actor​Name​Label</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">actorNameLabel</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="moviecell.cellid">
     <h3>
         <code><a href="#moviecell.cellid">cell​ID</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">cellID</span> = <span class="string literal">"</span><span class="string literal">MovieCell</span><span class="string literal">"</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">class</span> <span class="keyword">var</span> <span class="variable">cellID</span>: <span class="type">String</span>   </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="moviecell.imagedownloadtask">
+    <h3>
+        <code><a href="#moviecell.imagedownloadtask">image​Download​Task</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">imageDownloadTask</span>:<span class="type">URLSessionDataTask</span>? </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -61,6 +77,14 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">configureLyout</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="moviecell.layoutsubviews()">
+    <h3>
+        <code><a href="#moviecell.layoutsubviews()">layout​Subviews()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">layoutSubviews</span>()  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="moviecell.prepareforreuse()">
@@ -88,7 +112,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-12-26T14:19:24+0200">December 26, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-02-01T16:34:59+0200">February 1, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
