@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpirUp - Strings</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SpirUp
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#strings.badge">badge</a></li><li class="variable"><a href="#strings.likes">likes</a></li><li class="variable"><a href="#strings.comments">comments</a></li><li class="variable"><a href="#strings.following">following</a></li><li class="variable"><a href="#strings.followers">followers</a></li><li class="variable"><a href="#strings.follow">follow</a></li><li class="variable"><a href="#strings.join">join</a></li><li class="variable"><a href="#strings.joined">joined</a></li><li class="variable"><a href="#strings.addcomment">add​Comment</a></li><li class="variable"><a href="#strings.createpost">create​Post</a></li><li class="variable"><a href="#strings.postplaceholder">post​Place​Holder</a></li><li class="variable"><a href="#strings.addphoto">add​Photo</a></li><li class="variable"><a href="#strings.post">post</a></li><li class="variable"><a href="#strings.publicpost">public​Post</a></li><li class="variable"><a href="#strings.startmission">start​Mission</a></li><li class="variable"><a href="#strings.saysomethings">say​Some​Things</a></li><li class="variable"><a href="#strings.sharenow">share​Now</a></li><li class="variable"><a href="#strings.save">save</a></li><li class="variable"><a href="#strings.editpostplaceholder">edit​Post​Placeholder</a></li><li class="variable"><a href="#strings.posthistory">post​History</a></li><li class="variable"><a href="#strings.edited">edited</a></li><li class="variable"><a href="#strings.recommendedcourses">recommended​Courses</a></li><li class="variable"><a href="#strings.lessons">lessons</a></li><li class="variable"><a href="#strings.videos">videos</a></li><li class="variable"><a href="#strings.nextvideos">next​Videos</a></li><li class="variable"><a href="#strings.searchfanything">search​FAny​Thing</a></li><li class="variable"><a href="#strings.seeall">see​All</a></li><li class="variable"><a href="#strings.clearall">clear​All</a></li><li class="variable"><a href="#strings.recentsearched">recent​Searched</a></li><li class="variable"><a href="#strings.notifications">Notifications</a></li><li class="variable"><a href="#strings.overveiw">over​Veiw</a></li><li class="variable"><a href="#strings.achievments">achievments</a></li><li class="variable"><a href="#strings.groups">groups</a></li><li class="variable"><a href="#strings.group">group</a></li><li class="variable"><a href="#strings.mydream">my​Dream</a></li><li class="variable"><a href="#strings.firstdream">first​Dream</a></li><li class="variable"><a href="#strings.members">members</a></li><li class="variable"><a href="#strings.rockstarmember">rock​Star​Member</a></li><li class="variable"><a href="#strings.ups">ups</a></li><li class="variable"><a href="#strings.mygroups">my​Groups</a></li><li class="variable"><a href="#strings.creategroup">create​Group</a></li><li class="variable"><a href="#strings.creategroupvclabel">create​Group​VCLabel</a></li><li class="variable"><a href="#strings.creategroupvcsublabel">create​Group​VCSub​Label</a></li><li class="variable"><a href="#strings.addvalidgroupinfo">add​Valid​Group​Info</a></li><li class="variable"><a href="#strings.groupintersts">group​Intersts</a></li><li class="variable"><a href="#strings.points">points</a></li><li class="variable"><a href="#strings.pointssubstring">points​Sub​String</a></li><li class="variable"><a href="#strings.liketour">like​Tour</a></li><li class="variable"><a href="#strings.liketoursubstring">like​Tour​Sub​String</a></li><li class="variable"><a href="#strings.commenttour">Comment​Tour</a></li><li class="variable"><a href="#strings.commenttoursubstring">Comment​Tour​Sub​String</a></li><li class="variable"><a href="#strings.learntabtour">learn​Tab​Tour</a></li><li class="variable"><a href="#strings.learntoursubstring">learn​Tour​Sub​String</a></li><li class="variable"><a href="#strings.coursetabtour">course​Tab​Tour</a></li><li class="variable"><a href="#strings.coursetoursubstring">course​Tour​Sub​String</a></li><li class="variable"><a href="#strings.lessonvideo">lesson​Video</a></li><li class="variable"><a href="#strings.lessonvideotoursubstring">lesson​Video​Tour​Sub​String</a></li><li class="variable"><a href="#strings.editcommentheadline">Edit​Commentheadline</a></li><li class="variable"><a href="#strings.edituser">edit​User</a></li><li class="variable"><a href="#strings.edit">edit</a></li><li class="variable"><a href="#strings.hide">hide</a></li><li class="variable"><a href="#strings.delete">delete</a></li><li class="variable"><a href="#strings.unhide">un​Hide</a></li><li class="variable"><a href="#strings.block">block</a></li><li class="variable"><a href="#strings.blocked">blocked</a></li><li class="variable"><a href="#strings.blockedusers">blocked​Users</a></li><li class="variable"><a href="#strings.notsupportedmedia">not​Supported​Media</a></li><li class="variable"><a href="#strings.pleaseaddsharedata">please​Add​Share​Data</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Strings</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">Strings</span></body></html></code></pre>
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="strings.badge">
+    <h3>
+        <code><a href="#strings.badge">badge</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">badge</span> = <span class="string literal">"</span><span class="string literal">Rockstar</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.likes">
+    <h3>
+        <code><a href="#strings.likes">likes</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">likes</span> = <span class="string literal">"</span><span class="string literal">Likes</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.comments">
+    <h3>
+        <code><a href="#strings.comments">comments</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">comments</span> = <span class="string literal">"</span><span class="string literal">Comments</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.following">
+    <h3>
+        <code><a href="#strings.following">following</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">following</span> = <span class="string literal">"</span><span class="string literal">following</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.followers">
+    <h3>
+        <code><a href="#strings.followers">followers</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">followers</span> = <span class="string literal">"</span><span class="string literal">followers</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.follow">
+    <h3>
+        <code><a href="#strings.follow">follow</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">follow</span> = <span class="string literal">"</span><span class="string literal">follow</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.join">
+    <h3>
+        <code><a href="#strings.join">join</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">join</span> = <span class="string literal">"</span><span class="string literal">Join Group</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.joined">
+    <h3>
+        <code><a href="#strings.joined">joined</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">joined</span> = <span class="string literal">"</span><span class="string literal">Joined</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.addcomment">
+    <h3>
+        <code><a href="#strings.addcomment">add​Comment</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">addComment</span> = <span class="string literal">"</span><span class="string literal">Add Comment .. </span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.createpost">
+    <h3>
+        <code><a href="#strings.createpost">create​Post</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">createPost</span> = <span class="string literal">"</span><span class="string literal">Create Post</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.postplaceholder">
+    <h3>
+        <code><a href="#strings.postplaceholder">post​Place​Holder</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">postPlaceHolder</span> = <span class="string literal">"</span><span class="string literal">Share your knowledge and inspire people ...</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.addphoto">
+    <h3>
+        <code><a href="#strings.addphoto">add​Photo</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">addPhoto</span> = <span class="string literal">"</span><span class="string literal">   Add a photo/video</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.post">
+    <h3>
+        <code><a href="#strings.post">post</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">post</span> = <span class="string literal">"</span><span class="string literal">Post</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.publicpost">
+    <h3>
+        <code><a href="#strings.publicpost">public​Post</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">publicPost</span> = <span class="string literal">"</span><span class="string literal">This post will be public</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.startmission">
+    <h3>
+        <code><a href="#strings.startmission">start​Mission</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">startMission</span> = <span class="string literal">"</span><span class="string literal">Start Mission</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.saysomethings">
+    <h3>
+        <code><a href="#strings.saysomethings">say​Some​Things</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">saySomeThings</span> = <span class="string literal">"</span><span class="string literal">Say something about this ...</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.sharenow">
+    <h3>
+        <code><a href="#strings.sharenow">share​Now</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">shareNow</span> = <span class="string literal">"</span><span class="string literal">Share Now</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.save">
+    <h3>
+        <code><a href="#strings.save">save</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">save</span> = <span class="string literal">"</span><span class="string literal">Save Post</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.editpostplaceholder">
+    <h3>
+        <code><a href="#strings.editpostplaceholder">edit​Post​Placeholder</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">editPostPlaceholder</span> = <span class="string literal">"</span><span class="string literal">say what  to edit ...</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.posthistory">
+    <h3>
+        <code><a href="#strings.posthistory">post​History</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">postHistory</span> = <span class="string literal">"</span><span class="string literal">Post History</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.edited">
+    <h3>
+        <code><a href="#strings.edited">edited</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">edited</span> = <span class="string literal">"</span><span class="string literal">(Edited)</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.recommendedcourses">
+    <h3>
+        <code><a href="#strings.recommendedcourses">recommended​Courses</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">recommendedCourses</span> = <span class="string literal">"</span><span class="string literal">Recommended Courses</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.lessons">
+    <h3>
+        <code><a href="#strings.lessons">lessons</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">lessons</span> = <span class="string literal">"</span><span class="string literal">lessons</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.videos">
+    <h3>
+        <code><a href="#strings.videos">videos</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">videos</span> = <span class="string literal">"</span><span class="string literal">Videos</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.nextvideos">
+    <h3>
+        <code><a href="#strings.nextvideos">next​Videos</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">nextVideos</span> = <span class="string literal">"</span><span class="string literal">Next Videos</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.searchfanything">
+    <h3>
+        <code><a href="#strings.searchfanything">search​FAny​Thing</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">searchFAnyThing</span> = <span class="string literal">"</span><span class="string literal">Search for Any Thing</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.seeall">
+    <h3>
+        <code><a href="#strings.seeall">see​All</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">seeAll</span> = <span class="string literal">"</span><span class="string literal">See All</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.clearall">
+    <h3>
+        <code><a href="#strings.clearall">clear​All</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">clearAll</span> = <span class="string literal">"</span><span class="string literal">Clear All</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.recentsearched">
+    <h3>
+        <code><a href="#strings.recentsearched">recent​Searched</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">recentSearched</span> = <span class="string literal">"</span><span class="string literal">Recent Searches</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.notifications">
+    <h3>
+        <code><a href="#strings.notifications">Notifications</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">Notifications</span> = <span class="string literal">"</span><span class="string literal">Notifications</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.overveiw">
+    <h3>
+        <code><a href="#strings.overveiw">over​Veiw</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">overVeiw</span> = <span class="string literal">"</span><span class="string literal">OverView</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.achievments">
+    <h3>
+        <code><a href="#strings.achievments">achievments</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">achievments</span> = <span class="string literal">"</span><span class="string literal">Achievments</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.groups">
+    <h3>
+        <code><a href="#strings.groups">groups</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">groups</span> = <span class="string literal">"</span><span class="string literal">Groups</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.group">
+    <h3>
+        <code><a href="#strings.group">group</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">group</span> = <span class="string literal">"</span><span class="string literal">Group</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.mydream">
+    <h3>
+        <code><a href="#strings.mydream">my​Dream</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">myDream</span> = <span class="string literal">"</span><span class="string literal">My Dream is\n</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.firstdream">
+    <h3>
+        <code><a href="#strings.firstdream">first​Dream</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">firstDream</span> = <span class="string literal">"</span><span class="string literal">\nBuild my first startup and become indpendant</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.members">
+    <h3>
+        <code><a href="#strings.members">members</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">members</span> = <span class="string literal">"</span><span class="string literal">Members</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.rockstarmember">
+    <h3>
+        <code><a href="#strings.rockstarmember">rock​Star​Member</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">rockStarMember</span> = <span class="string literal">"</span><span class="string literal">Rockstar Member</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.ups">
+    <h3>
+        <code><a href="#strings.ups">ups</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">ups</span> = <span class="string literal">"</span><span class="string literal">UPS</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.mygroups">
+    <h3>
+        <code><a href="#strings.mygroups">my​Groups</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">myGroups</span> = <span class="string literal">"</span><span class="string literal">My Groups</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.creategroup">
+    <h3>
+        <code><a href="#strings.creategroup">create​Group</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">createGroup</span> = <span class="string literal">"</span><span class="string literal">Create Group</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.creategroupvclabel">
+    <h3>
+        <code><a href="#strings.creategroupvclabel">create​Group​VCLabel</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">createGroupVCLabel</span> = <span class="string literal">"</span><span class="string literal">Create a new Group</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.creategroupvcsublabel">
+    <h3>
+        <code><a href="#strings.creategroupvcsublabel">create​Group​VCSub​Label</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">createGroupVCSubLabel</span> = <span class="string literal">"</span><span class="string literal">add a descriptive name to your group</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.addvalidgroupinfo">
+    <h3>
+        <code><a href="#strings.addvalidgroupinfo">add​Valid​Group​Info</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">addValidGroupInfo</span> =  <span class="string literal">"</span><span class="string literal">please add a valid group name</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.groupintersts">
+    <h3>
+        <code><a href="#strings.groupintersts">group​Intersts</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">groupIntersts</span> =  <span class="string literal">"</span><span class="string literal">Group Intersts</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.points">
+    <h3>
+        <code><a href="#strings.points">points</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">points</span> =  <span class="string literal">"</span><span class="string literal">Points</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.pointssubstring">
+    <h3>
+        <code><a href="#strings.pointssubstring">points​Sub​String</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">pointsSubString</span> =  <span class="string literal">"</span><span class="string literal">You have completed your first mission, Signup now to save up the progress.</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.liketour">
+    <h3>
+        <code><a href="#strings.liketour">like​Tour</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">likeTour</span> =  <span class="string literal">"</span><span class="string literal">Like</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.liketoursubstring">
+    <h3>
+        <code><a href="#strings.liketoursubstring">like​Tour​Sub​String</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">likeTourSubString</span> =  <span class="string literal">"</span><span class="string literal">You can like your favourite posts and Stories.</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.commenttour">
+    <h3>
+        <code><a href="#strings.commenttour">Comment​Tour</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">CommentTour</span> =  <span class="string literal">"</span><span class="string literal">Comment</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.commenttoursubstring">
+    <h3>
+        <code><a href="#strings.commenttoursubstring">Comment​Tour​Sub​String</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">CommentTourSubString</span> =  <span class="string literal">"</span><span class="string literal">You can Comment on your favourite posts and Stories.</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.learntabtour">
+    <h3>
+        <code><a href="#strings.learntabtour">learn​Tab​Tour</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">learnTabTour</span> =  <span class="string literal">"</span><span class="string literal">Learn</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.learntoursubstring">
+    <h3>
+        <code><a href="#strings.learntoursubstring">learn​Tour​Sub​String</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">learnTourSubString</span> =  <span class="string literal">"</span><span class="string literal">You can open learn Module to start learning and gain experience.</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.coursetabtour">
+    <h3>
+        <code><a href="#strings.coursetabtour">course​Tab​Tour</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">courseTabTour</span> =  <span class="string literal">"</span><span class="string literal">Courses</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.coursetoursubstring">
+    <h3>
+        <code><a href="#strings.coursetoursubstring">course​Tour​Sub​String</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">courseTourSubString</span> =  <span class="string literal">"</span><span class="string literal">Choose your favourite course to start learning.</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.lessonvideo">
+    <h3>
+        <code><a href="#strings.lessonvideo">lesson​Video</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">lessonVideo</span> =  <span class="string literal">"</span><span class="string literal">Video</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.lessonvideotoursubstring">
+    <h3>
+        <code><a href="#strings.lessonvideotoursubstring">lesson​Video​Tour​Sub​String</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">lessonVideoTourSubString</span> =  <span class="string literal">"</span><span class="string literal">Choose your  prefered video to start learning.</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.editcommentheadline">
+    <h3>
+        <code><a href="#strings.editcommentheadline">Edit​Commentheadline</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">EditCommentheadline</span> =  <span class="string literal">"</span><span class="string literal">Edit comment</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.edituser">
+    <h3>
+        <code><a href="#strings.edituser">edit​User</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">editUser</span> =  <span class="string literal">"</span><span class="string literal">Edit User</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.edit">
+    <h3>
+        <code><a href="#strings.edit">edit</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">edit</span> =  <span class="string literal">"</span><span class="string literal">Edit</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.hide">
+    <h3>
+        <code><a href="#strings.hide">hide</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">hide</span> =  <span class="string literal">"</span><span class="string literal">Hide</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.delete">
+    <h3>
+        <code><a href="#strings.delete">delete</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">delete</span> =  <span class="string literal">"</span><span class="string literal">Delete</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.unhide">
+    <h3>
+        <code><a href="#strings.unhide">un​Hide</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">unHide</span> = <span class="string literal">"</span><span class="string literal">UnHide</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.block">
+    <h3>
+        <code><a href="#strings.block">block</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">block</span> =  <span class="string literal">"</span><span class="string literal">Block</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.blocked">
+    <h3>
+        <code><a href="#strings.blocked">blocked</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">blocked</span> =  <span class="string literal">"</span><span class="string literal">Blocked</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.blockedusers">
+    <h3>
+        <code><a href="#strings.blockedusers">blocked​Users</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">blockedUsers</span> =  <span class="string literal">"</span><span class="string literal">Blocked Users</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.notsupportedmedia">
+    <h3>
+        <code><a href="#strings.notsupportedmedia">not​Supported​Media</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">notSupportedMedia</span> = <span class="string literal">"</span><span class="string literal">can't import , not supported mmedia type</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="strings.pleaseaddsharedata">
+    <h3>
+        <code><a href="#strings.pleaseaddsharedata">please​Add​Share​Data</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">pleaseAddShareData</span> = <span class="string literal">"</span><span class="string literal">please add what to share</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-02-13T14:48:30+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

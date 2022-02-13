@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpirUp - PostHelper</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SpirUp
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#posthelper.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#posthelper.shared">shared</a></li><li class="variable"><a href="#posthelper.outterviewisshared">outter​View​IsShared</a></li><li class="variable"><a href="#posthelper.imageortextbody">Image​OrText​Body</a></li><li class="variable"><a href="#posthelper.infoviewisingroup">Info​View​IsIngroup</a></li><li class="variable"><a href="#posthelper.shownpost">shown​Post</a></li><li class="variable"><a href="#posthelper.detailedoutterviewisshared">Detailedoutter​View​IsShared</a></li><li class="variable"><a href="#posthelper.postiseditted">Post​ISEditted</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#posthelper.getpostcellcontent(post:)">get​Post​Cell​Content(post:​)</a></li><li class="function"><a href="#posthelper.getdetailedpostcontent(post:)">get​Detailed​Post​Content(post:​)</a></li><li class="function"><a href="#posthelper.getpostcellsize(post:with:)">get​Post​Cellsize(post:​with:​)</a></li><li class="function"><a href="#posthelper.textcellsize()">text​Cell​Size()</a></li><li class="function"><a href="#posthelper.imagecellsize(post:cvwidth:)">image​Cell​Size(post:​cVWidth:​)</a></li><li class="function"><a href="#posthelper.sharedsize(post:cvwidth:)">shared​Size(post:​cVWidth:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Post​Helper</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">PostHelper</span></body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="posthelper.init()">
+    <h3>
+        <code><a href="#posthelper.init()">init()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">init</span>() </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="posthelper.shared">
+    <h3>
+        <code><a href="#posthelper.shared">shared</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">shared</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="posthelper.outterviewisshared">
+    <h3>
+        <code><a href="#posthelper.outterviewisshared">outter​View​IsShared</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">outterViewIsShared</span>:[<span class="type">Bool</span>:()-&gt;<a href="/OutterViewBase"><span class="type">OutterViewBase</span></a>] = [<span class="keyword">true</span>:<a href="/OtterViewHelper"><span class="type">OtterViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getSharedOutterView</span>
+                                                       ,<span class="keyword">false</span>:<a href="/OtterViewHelper"><span class="type">OtterViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getOriginalOtterView</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="posthelper.imageortextbody">
+    <h3>
+        <code><a href="#posthelper.imageortextbody">Image​OrText​Body</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">ImageOrTextBody</span>:[<span class="type">String</span>:()-&gt;<a href="/BodyViewBase"><span class="type">BodyViewBase</span></a>] = [<span class="string literal">"</span><span class="string literal">Text</span><span class="string literal">"</span>:<a href="/BodyViewHelper"><span class="type">BodyViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getTextPost</span>
+                                                       ,<span class="string literal">"</span><span class="string literal">Image</span><span class="string literal">"</span>:<a href="/BodyViewHelper"><span class="type">BodyViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getImagePost</span>
+                                                        ,<span class="string literal">"</span><span class="string literal">Video</span><span class="string literal">"</span>:<a href="/BodyViewHelper"><span class="type">BodyViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getImagePost</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="posthelper.infoviewisingroup">
+    <h3>
+        <code><a href="#posthelper.infoviewisingroup">Info​View​IsIngroup</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">InfoViewIsIngroup</span>:[<span class="type">Bool</span>:()-&gt;<a href="/PostLabelsBase"><span class="type">PostLabelsBase</span></a>] = [<span class="keyword">true</span>:<a href="/InfoViewHelper"><span class="type">InfoViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getGroupPost</span>
+                                                       ,<span class="keyword">false</span>:<a href="/InfoViewHelper"><span class="type">InfoViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getIndividualPost</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="posthelper.shownpost">
+    <h3>
+        <code><a href="#posthelper.shownpost">shown​Post</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">shownPost</span>:[<span class="type">Bool</span>:(<span class="type">Codable</span>)-&gt;<a href="/Post"><span class="type">Post</span></a>] = [
+        <span class="keyword">false</span>:<a href="/PostModelHelper"><span class="type">PostModelHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getOrginalPost</span>,
+        <span class="keyword">true</span>:<a href="/PostModelHelper"><span class="type">PostModelHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getOrginalPostWithSharedPost</span>
+    ] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="posthelper.detailedoutterviewisshared">
+    <h3>
+        <code><a href="#posthelper.detailedoutterviewisshared">Detailedoutter​View​IsShared</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">DetailedoutterViewIsShared</span>:[<span class="type">Bool</span>:()-&gt;<a href="/DetailedOutterBase"><span class="type">DetailedOutterBase</span></a>] = [<span class="keyword">true</span>:<a href="/OtterViewHelper"><span class="type">OtterViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getDetailedShared</span>
+                                                      ,<span class="keyword">false</span>:<a href="/OtterViewHelper"><span class="type">OtterViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getDetailedOriginal</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="posthelper.postiseditted">
+    <h3>
+        <code><a href="#posthelper.postiseditted">Post​ISEditted</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">PostISEditted</span>:[<span class="type">Bool</span>:()-&gt;<a href="/InSideEditView"><span class="type">InSideEditView</span></a>?] = [<span class="keyword">true</span>:<a href="/BodyViewHelper"><span class="type">BodyViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getEditedView</span>,
+                                                    <span class="keyword">false</span>:<a href="/BodyViewHelper"><span class="type">BodyViewHelper</span></a>.<span class="variable">shared</span>.<span class="variable">getNotEdited</span>] </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="posthelper.getpostcellcontent(post:)">
+    <h3>
+        <code><a href="#posthelper.getpostcellcontent(post:)">get​Post​Cell​Content(post:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getPostCellContent</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>)-&gt;<span class="type">UIView</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="posthelper.getdetailedpostcontent(post:)">
+    <h3>
+        <code><a href="#posthelper.getdetailedpostcontent(post:)">get​Detailed​Post​Content(post:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getDetailedPostContent</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>)-&gt;<span class="type">UIView</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="posthelper.getpostcellsize(post:with:)">
+    <h3>
+        <code><a href="#posthelper.getpostcellsize(post:with:)">get​Post​Cellsize(post:​with:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getPostCellsize</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>,<span class="variable">with</span> <span class="variable">collectionViewWidth</span>:<span class="type">CGFloat</span>)-&gt;<span class="type">CGSize</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="posthelper.textcellsize()">
+    <h3>
+        <code><a href="#posthelper.textcellsize()">text​Cell​Size()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>  <span class="keyword">func</span> <span class="function">textCellSize</span>()-&gt;<span class="type">CGFloat</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="posthelper.imagecellsize(post:cvwidth:)">
+    <h3>
+        <code><a href="#posthelper.imagecellsize(post:cvwidth:)">image​Cell​Size(post:​cVWidth:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">imageCellSize</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>,<span class="variable">cVWidth</span>:<span class="type">CGFloat</span>)-&gt;<span class="type">CGFloat</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="posthelper.sharedsize(post:cvwidth:)">
+    <h3>
+        <code><a href="#posthelper.sharedsize(post:cvwidth:)">shared​Size(post:​cVWidth:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">sharedSize</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>,<span class="variable">cVWidth</span>:<span class="type">CGFloat</span>)-&gt;<span class="type">CGFloat</span></body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-02-13T14:48:29+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

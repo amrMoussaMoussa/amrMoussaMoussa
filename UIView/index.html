@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#uiview.roundcorners(corners:radius:)">round​Corners(corners:​radius:​)</a></li></ul></li></ol>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#uiview.globalpoint">global​Point</a></li><li class="variable"><a href="#uiview.globalframetosuperview">global​Frame​ToSuper​View</a></li><li class="variable"><a href="#uiview.globalframe">global​Frame</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#uiview.getrootvc()">get​Root​VC()</a></li><li class="function"><a href="#uiview.roundcorners(corners:radius:)">round​Corners(corners:​radius:​)</a></li><li class="function"><a href="#uiview.addtappgesture(delegate:action:)">add​Tapp​Gesture(delegate:​action:​)</a></li><li class="function"><a href="#uiview.addshadow(opacity:color:)">add​Shadow(opacity:​color:​)</a></li><li class="function"><a href="#uiview.createdashedline(from:to:color:strokelength:gaplength:width:)">create​Dashed​Line(from:​to:​color:​stroke​Length:​gap​Length:​width:​)</a></li><li class="function"><a href="#uiview.getsubviewsofview(v:typeof:)">get​Subviews​OfView(v:​type​OF:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -35,15 +35,83 @@
     <small>Extensions on</small>
     <code class="name">UIView</code>
 </h1>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="uiview.globalpoint">
+    <h3>
+        <code><a href="#uiview.globalpoint">global​Point</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">globalPoint</span> :<span class="type">CGPoint</span>?  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="uiview.globalframetosuperview">
+    <h3>
+        <code><a href="#uiview.globalframetosuperview">global​Frame​ToSuper​View</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">globalFrameToSuperView</span> :<span class="type">CGRect</span>?  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="uiview.globalframe">
+    <h3>
+        <code><a href="#uiview.globalframe">global​Frame</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">globalFrame</span>: <span class="type">CGRect</span>?  </body></html></code></pre>
+</div>
+</div>
+    </section>
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="uiview.roundcorners(corners:radius:)">
+        <div role="article" class="function" id="uiview.getrootvc()">
+    <h3>
+        <code><a href="#uiview.getrootvc()">get​Root​VC()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getRootVC</span>()-&gt; <span class="type">UIViewController</span>? </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="uiview.roundcorners(corners:radius:)">
     <h3>
         <code><a href="#uiview.roundcorners(corners:radius:)">round​Corners(corners:​radius:​)</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">roundCorners</span>(<span class="variable">corners</span>: <span class="type">UIRectCorner</span>, <span class="variable">radius</span>: <span class="type">CGFloat</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="uiview.addtappgesture(delegate:action:)">
+    <h3>
+        <code><a href="#uiview.addtappgesture(delegate:action:)">add​Tapp​Gesture(delegate:​action:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">addTappGesture</span>(<span class="variable">delegate</span>:<span class="keyword">Any</span>?,<span class="variable">action</span>:<span class="type">Selector</span>?) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="uiview.addshadow(opacity:color:)">
+    <h3>
+        <code><a href="#uiview.addshadow(opacity:color:)">add​Shadow(opacity:​color:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">addShadow</span>(<span class="variable">opacity</span>:<span class="type">Float</span>,<span class="variable">color</span>:<span class="type">UIColor</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="uiview.createdashedline(from:to:color:strokelength:gaplength:width:)">
+    <h3>
+        <code><a href="#uiview.createdashedline(from:to:color:strokelength:gaplength:width:)">create​Dashed​Line(from:​to:​color:​stroke​Length:​gap​Length:​width:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createDashedLine</span>(<span class="variable">from</span> <span class="variable">point1</span>: <span class="type">CGPoint</span>, <span class="variable">to</span> <span class="variable">point2</span>: <span class="type">CGPoint</span>, <span class="variable">color</span>: <span class="type">UIColor</span>, <span class="variable">strokeLength</span>: <span class="type">NSNumber</span>, <span class="variable">gapLength</span>: <span class="type">NSNumber</span>, <span class="variable">width</span>: <span class="type">CGFloat</span>) -&gt; <span class="type">CAShapeLayer</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="uiview.getsubviewsofview(v:typeof:)">
+    <h3>
+        <code><a href="#uiview.getsubviewsofview(v:typeof:)">get​Subviews​OfView(v:​type​OF:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getSubviewsOfView</span>&lt;<span class="variable">T</span>&gt;(<span class="variable">v</span>:<span class="type">UIView</span>,<span class="variable">typeOF</span>:<span class="type">T</span>.<span class="type">Type</span>) -&gt; [<span class="type">T</span>]  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -52,7 +120,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-12-20T11:57:23+0200">December 20, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-02-13T14:48:29+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpirUp - TextBodyView</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SpirUp
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#textbodyview.init(frame:)">init(frame:​)</a></li><li class="initializer"><a href="#textbodyview.init?(coder:)">init?(coder:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#textbodyview.useravatarimage">user​Avatar​Image</a></li><li class="variable"><a href="#textbodyview.badgelabel">badge​Label</a></li><li class="variable"><a href="#textbodyview.postinfoview">post​Info​View</a></li><li class="variable"><a href="#textbodyview.bodylabel">body​Label</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#textbodyview.layoutsubviews()">layout​Subviews()</a></li><li class="function"><a href="#textbodyview.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#textbodyview.setdata(post:)">set​Data(post:​)</a></li><li class="function"><a href="#textbodyview.addnameinfoview(view:)">add​Name​Info​View(view:​)</a></li><li class="function"><a href="#textbodyview.addeditview(view:)">add​Edit​View(view:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Text​Body​View</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">TextBodyView</span>: <a href="/BodyViewBase"><span class="type">BodyViewBase</span></a>  </body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="textbodyview.init(frame:)">
+    <h3>
+        <code><a href="#textbodyview.init(frame:)">init(frame:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">init</span>(<span class="variable">frame</span>: <span class="type">CGRect</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="textbodyview.init?(coder:)">
+    <h3>
+        <code><a href="#textbodyview.init?(coder:)">init?(coder:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">required</span> <span class="keyword">init</span>?(<span class="variable">coder</span>: <span class="type">NSCoder</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="textbodyview.useravatarimage">
+    <h3>
+        <code><a href="#textbodyview.useravatarimage">user​Avatar​Image</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">userAvatarImage</span>:<span class="type">AMAvatarImage</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="textbodyview.badgelabel">
+    <h3>
+        <code><a href="#textbodyview.badgelabel">badge​Label</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">badgeLabel</span>:<span class="type">AMItemLable</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="textbodyview.postinfoview">
+    <h3>
+        <code><a href="#textbodyview.postinfoview">post​Info​View</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">postInfoView</span>:<span class="type">UIView</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="textbodyview.bodylabel">
+    <h3>
+        <code><a href="#textbodyview.bodylabel">body​Label</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">bodyLabel</span>:<span class="type">AMItemLable</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="textbodyview.layoutsubviews()">
+    <h3>
+        <code><a href="#textbodyview.layoutsubviews()">layout​Subviews()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">layoutSubviews</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="textbodyview.configurelyout()">
+    <h3>
+        <code><a href="#textbodyview.configurelyout()">configure​Lyout()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">configureLyout</span>() </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="textbodyview.setdata(post:)">
+    <h3>
+        <code><a href="#textbodyview.setdata(post:)">set​Data(post:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">setData</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="textbodyview.addnameinfoview(view:)">
+    <h3>
+        <code><a href="#textbodyview.addnameinfoview(view:)">add​Name​Info​View(view:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">addNameInfoView</span>(<span class="variable">view</span>:<span class="type">UIView</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="textbodyview.addeditview(view:)">
+    <h3>
+        <code><a href="#textbodyview.addeditview(view:)">add​Edit​View(view:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">func</span> <span class="function">addEditView</span>(<span class="variable">view</span>:<a href="/InSideEditView"><span class="type">InSideEditView</span></a>?)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-02-13T14:48:29+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

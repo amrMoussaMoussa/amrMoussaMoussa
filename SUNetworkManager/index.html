@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpirUp - SUNetworkManager</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SpirUp
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#sunetworkmanager.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#sunetworkmanager.shared">shared</a></li><li class="variable"><a href="#sunetworkmanager.baseurl">base​Url</a></li><li class="variable"><a href="#sunetworkmanager.curentusertoken">curent​User​Token</a></li><li class="variable"><a href="#sunetworkmanager.currentuser">current​User</a></li><li class="variable"><a href="#sunetworkmanager.currentnotificationtoken">current​Notification​Token</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#sunetworkmanager.getcurrentusertoken()">get​Current​User​Token()</a></li><li class="function"><a href="#sunetworkmanager.getonstartdata(completed:)">get​OnStart​Data(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.updatenotificationtoken(notificationtoken:)">update​Notification​Token(notification​Token:​)</a></li><li class="function"><a href="#sunetworkmanager.getallposts(page:pagesize:completed:)">get​All​Posts(page:​page​Size:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getgroups(page:pagesize:completed:)">get​Groups(page:​page​Size:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getuserprofile(id:completed:)">get​User​Profile(id:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getspecificgroupdata(groupid:completed:)">get​Specific​Group​Data(group​Id:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.togglelike(postid:completed:)">toggle​Like(post​Id:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.addpostcomment(postid:commenttext:completed:)">add​Post​Comment(post​Id:​comment​Text:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.deletecomment(commentid:completed:)">delete​Comment(comment​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.createnewpost(postdesc:privacy:teamid:type:medias:completed:)">create​New​Post(post​Desc:​privacy:​team​ID:​type:​medias:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.sharepost(postid:sharetext:completed:)">share​Post(post​ID:​share​Text:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.editpost(postid:edittext:completed:)">edit​Post(post​ID:​edit​Text:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getposthistory(postid:completed:)">get​Post​History(post​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getpost(id:completed:)">get​Post(id:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.deletepost(postid:completed:)">delete​Post(post​Id:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.togglefollow(userid:completed:)">toggle​Follow(user​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getuserfollowers(userid:completed:)">get​User​Followers(user​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getuserfollowings(userid:completed:)">get​User​Followings(user​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getblcokedusers(completed:)">get​Blcoked​Users(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.blockuser(userid:completed:)">block​User(user​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getallcourses(page:pagesize:completed:)">get​All​Courses(page:​page​Size:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getcoursewithcourseid(courseid:completed:)">get​Course​With​Course​ID(course​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getcourselessons(playlistid:completed:)">get​Course​Lessons(play​List​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getrecentsearch(completed:)">get​Recent​Search(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.search(text:completed:)">search(text:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.deleteallsearch(completed:)">delete​All​Search(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getnotifications(page:pagesize:completed:)">get​Notifications(page:​page​Size:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.createnewgroup(name:desc:privacy:intersetsids:image:completed:)">create​New​Group(name:​desc:​privacy:​intersets​IDs:​image:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.getgroupintersts(completed:)">get​Group​Intersts(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.joingroup(groupid:completed:)">join​Group(group​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.leavegroup(groupid:completed:)">leave​Group(group​ID:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.processnetworkrequest(httpmethod:urlsuffix:requestheader:requestbody:completed:)">process​Network​Request(http​Method:​url​Suffix:​request​Header:​request​Body:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.processnetworkrequestwithoutreturntype(httpmethod:urlsuffix:requestheader:requestbody:completed:)">process​Network​Request​Without​Return​Type(http​Method:​url​Suffix:​request​Header:​request​Body:​completed:​)</a></li><li class="function"><a href="#sunetworkmanager.updateusertokenonstart(completed:)">Update​User​Token​OnStart(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.currentuserdata(completed:)">current​User​Data(completed:​)</a></li><li class="function"><a href="#sunetworkmanager.savenewtokenlocaly(token:)">save​New​Token​Localy(token:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">SUNetwork​Manager</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">SUNetworkManager</span></body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="sunetworkmanager.init()">
+    <h3>
+        <code><a href="#sunetworkmanager.init()">init()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">init</span>() </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="sunetworkmanager.shared">
+    <h3>
+        <code><a href="#sunetworkmanager.shared">shared</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">shared</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunetworkmanager.baseurl">
+    <h3>
+        <code><a href="#sunetworkmanager.baseurl">base​Url</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">baseUrl</span> = <span class="string literal">"</span><span class="string literal">http://52.47.202.168:8080/api/application/</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunetworkmanager.curentusertoken">
+    <h3>
+        <code><a href="#sunetworkmanager.curentusertoken">curent​User​Token</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">curentUserToken</span>:<a href="/UserToken"><span class="type">UserToken</span></a>? </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunetworkmanager.currentuser">
+    <h3>
+        <code><a href="#sunetworkmanager.currentuser">current​User</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">currentUser</span>:<a href="/ProfileUser"><span class="type">ProfileUser</span></a>? </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunetworkmanager.currentnotificationtoken">
+    <h3>
+        <code><a href="#sunetworkmanager.currentnotificationtoken">current​Notification​Token</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">currentNotificationToken</span>:<span class="type">String</span> = <span class="string literal">"</span><span class="string literal"/><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="sunetworkmanager.getcurrentusertoken()">
+    <h3>
+        <code><a href="#sunetworkmanager.getcurrentusertoken()">get​Current​User​Token()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getCurrentUserToken</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>user toeken</p>
+
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getonstartdata(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getonstartdata(completed:)">get​OnStart​Data(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getOnStartData</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Bool</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>on start data</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Bool,network​Error&gt;)-&gt;()</code></td>
+    <td><p>is saved user data</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.updatenotificationtoken(notificationtoken:)">
+    <h3>
+        <code><a href="#sunetworkmanager.updatenotificationtoken(notificationtoken:)">update​Notification​Token(notification​Token:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">updateNotificationToken</span>(<span class="variable">notificationToken</span>:<span class="type">String</span>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>update notification</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>notification​Token</th>
+    <td><code class="type">String</code></td>
+    <td><p>token</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getallposts(page:pagesize:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getallposts(page:pagesize:completed:)">get​All​Posts(page:​page​Size:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getAllPosts</span>(<span class="variable">page</span>:<span class="type">Int</span>,<span class="variable">pageSize</span>:<span class="type">Int</span> = <span class="number literal">10</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/Post"><span class="type">Post</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get all user posts</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>page</th>
+    <td><code class="type">Int</code></td>
+    <td><p>page int</p>
+</td>
+</tr>
+<tr>
+    <th>page​Size</th>
+    <td><code class="type">Int</code></td>
+    <td><p>int page size</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Post],network​Error&gt;)-&gt;()</code></td>
+    <td><p>arr of posts or network error</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getgroups(page:pagesize:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getgroups(page:pagesize:completed:)">get​Groups(page:​page​Size:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getGroups</span>(<span class="variable">page</span>:<span class="type">Int</span>,<span class="variable">pageSize</span>:<span class="type">Int</span> = <span class="number literal">10</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/Group"><span class="type">Group</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get all groups</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>page</th>
+    <td><code class="type">Int</code></td>
+    <td><p>page int</p>
+</td>
+</tr>
+<tr>
+    <th>page​Size</th>
+    <td><code class="type">Int</code></td>
+    <td><p>int page size</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Group],network​Error&gt;)-&gt;()</code></td>
+    <td><p>arr of groups or network error</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getuserprofile(id:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getuserprofile(id:completed:)">get​User​Profile(id:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getUserProfile</span>(<span class="variable">id</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/UserData"><span class="type">UserData</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getspecificgroupdata(groupid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getspecificgroupdata(groupid:completed:)">get​Specific​Group​Data(group​Id:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getSpecificGroupData</span>(<span class="variable">groupId</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Group"><span class="type">Group</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get group data</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>group​Id</th>
+    <td><code class="type">Int</code></td>
+    <td><p>int group ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Group,network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed group</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.togglelike(postid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.togglelike(postid:completed:)">toggle​Like(post​Id:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">toggleLike</span>(<span class="variable">postId</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/PostLike"><span class="type">PostLike</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.addpostcomment(postid:commenttext:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.addpostcomment(postid:commenttext:completed:)">add​Post​Comment(post​Id:​comment​Text:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">addPostComment</span>(<span class="variable">postId</span>:<span class="type">Int</span>,<span class="variable">commentText</span>:<span class="type">String</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/PostComment"><span class="type">PostComment</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>add post comment to server</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>post​Id</th>
+    <td><code class="type">Int</code></td>
+    <td><p>post ID</p>
+</td>
+</tr>
+<tr>
+    <th>comment​Text</th>
+    <td><code class="type">String</code></td>
+    <td><p>comment tect</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Post​Comment,network​Error&gt;)-&gt;()</code></td>
+    <td><p>function to do when comment uploaded</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.deletecomment(commentid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.deletecomment(commentid:completed:)">delete​Comment(comment​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">deleteComment</span>(<span class="variable">commentID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Bool</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>delete comment</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>comment​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>comment ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Bool,network​Error&gt;)-&gt;()</code></td>
+    <td><p>is deleted</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.createnewpost(postdesc:privacy:teamid:type:medias:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.createnewpost(postdesc:privacy:teamid:type:medias:completed:)">create​New​Post(post​Desc:​privacy:​team​ID:​type:​medias:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createNewPost</span>(<span class="variable">postDesc</span>:<span class="type">String</span>,<span class="variable">privacy</span>:<span class="type">String</span> = <span class="string literal">"</span><span class="string literal">PUBLIC</span><span class="string literal">"</span>,<span class="variable">teamID</span>:<span class="type">Int</span>? = <span class="keyword">nil</span>,<span class="variable">type</span>:<span class="type">String</span> = <span class="string literal">"</span><span class="string literal">text</span><span class="string literal">"</span>,<span class="variable">medias</span>:[<a href="/Media"><span class="type">Media</span></a>] = [],<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Post"><span class="type">Post</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>create new post in DB</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>post​Desc</th>
+    <td><code class="type">String</code></td>
+    <td><p>post text</p>
+</td>
+</tr>
+<tr>
+    <th>privacy</th>
+    <td><code class="type">String</code></td>
+    <td><p>privacy</p>
+</td>
+</tr>
+<tr>
+    <th>team​ID</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>is group post with team ID</p>
+</td>
+</tr>
+<tr>
+    <th>type</th>
+    <td><code class="type">String</code></td>
+    <td><p>text or media</p>
+</td>
+</tr>
+<tr>
+    <th>images</th>
+    <td></td>
+    <td><p>array of images</p>
+</td>
+</tr>
+<tr>
+    <th>videos</th>
+    <td></td>
+    <td><p>array of  Videos</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Post,network​Error&gt;)-&gt;()</code></td>
+    <td><p>what to do when upload complete.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.sharepost(postid:sharetext:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.sharepost(postid:sharetext:completed:)">share​Post(post​ID:​share​Text:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sharePost</span>(<span class="variable">postID</span>:<span class="type">Int</span>,<span class="variable">shareText</span>:<span class="type">String</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Post"><span class="type">Post</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>share post</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>post​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>post id</p>
+</td>
+</tr>
+<tr>
+    <th>share​Text</th>
+    <td><code class="type">String</code></td>
+    <td><p>sahred text</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Post,network​Error&gt;)-&gt;()</code></td>
+    <td><p>what to do whe udpated in in the server</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.editpost(postid:edittext:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.editpost(postid:edittext:completed:)">edit​Post(post​ID:​edit​Text:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">editPost</span>(<span class="variable">postID</span>:<span class="type">Int</span>,<span class="variable">editText</span>:<span class="type">String</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Post"><span class="type">Post</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>edit post in  server</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>post​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>post id</p>
+</td>
+</tr>
+<tr>
+    <th>edit​Text</th>
+    <td><code class="type">String</code></td>
+    <td><p>editted text</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Post,network​Error&gt;)-&gt;()</code></td>
+    <td><p>what to do when uploaded</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getposthistory(postid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getposthistory(postid:completed:)">get​Post​History(post​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getPostHistory</span>(<span class="variable">postID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/PostHistory"><span class="type">PostHistory</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get post edit History.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>post​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>post ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Post​History],network​Error&gt;)-&gt;()</code></td>
+    <td><p>what to do whenn done uploading</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getpost(id:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getpost(id:completed:)">get​Post(id:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getPost</span>(<span class="variable">id</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Post"><span class="type">Post</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get post with ID</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>id</th>
+    <td><code class="type">Int</code></td>
+    <td><p>id Int</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Post,network​Error&gt;)-&gt;()</code></td>
+    <td><p>post or network error</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.deletepost(postid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.deletepost(postid:completed:)">delete​Post(post​Id:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">deletePost</span>(<span class="variable">postId</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="keyword">Any</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.togglefollow(userid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.togglefollow(userid:completed:)">toggle​Follow(user​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">toggleFollow</span>(<span class="variable">userID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/follwoing"><span class="type">follwoing</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>toggle follow</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>user​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>followerID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;follwoing,network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed following status</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getuserfollowers(userid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getuserfollowers(userid:completed:)">get​User​Followers(user​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getUserFollowers</span>(<span class="variable">userID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/PostUser"><span class="type">PostUser</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get users followers</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>user​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>user id</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Post​User],network​Error&gt;)-&gt;()</code></td>
+    <td><p>what to dow hen get followrs.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getuserfollowings(userid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getuserfollowings(userid:completed:)">get​User​Followings(user​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getUserFollowings</span>(<span class="variable">userID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/PostUser"><span class="type">PostUser</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getblcokedusers(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getblcokedusers(completed:)">get​Blcoked​Users(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getBlcokedUsers</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/PostUser"><span class="type">PostUser</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>blocked users list</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Post​User],network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed blocked list</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.blockuser(userid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.blockuser(userid:completed:)">block​User(user​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">blockUser</span>(<span class="variable">userID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Blocked"><span class="type">Blocked</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>block user</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>user​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>user ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Blocked,network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed block user</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getallcourses(page:pagesize:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getallcourses(page:pagesize:completed:)">get​All​Courses(page:​page​Size:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getAllCourses</span>(<span class="variable">page</span>:<span class="type">Int</span>,<span class="variable">pageSize</span>:<span class="type">Int</span> = <span class="number literal">10</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/Course"><span class="type">Course</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get all courses</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>page</th>
+    <td><code class="type">Int</code></td>
+    <td><p>page</p>
+</td>
+</tr>
+<tr>
+    <th>page​Size</th>
+    <td><code class="type">Int</code></td>
+    <td><p>page size</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Course],network​Error&gt;)-&gt;()</code></td>
+    <td><p>arr of courses</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getcoursewithcourseid(courseid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getcoursewithcourseid(courseid:completed:)">get​Course​With​Course​ID(course​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getCourseWithCourseID</span>(<span class="variable">courseID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Course"><span class="type">Course</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getcourselessons(playlistid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getcourselessons(playlistid:completed:)">get​Course​Lessons(play​List​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getCourseLessons</span>(<span class="variable">playListID</span>:<span class="type">String</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/CourseLesson"><span class="type">CourseLesson</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get specific course lessons</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>play​List​ID</th>
+    <td><code class="type">String</code></td>
+    <td><p>youtube playList ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Course​Lesson,network​Error&gt;)-&gt;()</code></td>
+    <td><p>course lessons</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getrecentsearch(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getrecentsearch(completed:)">get​Recent​Search(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getRecentSearch</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/RecentSearch"><span class="type">RecentSearch</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get recent user search</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Recent​Search],network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed arr of user searches</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.search(text:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.search(text:completed:)">search(text:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">search</span>(<span class="variable">text</span>:<span class="type">String</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Search"><span class="type">Search</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.deleteallsearch(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.deleteallsearch(completed:)">delete​All​Search(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">deleteAllSearch</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Bool</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>delete all searches</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Bool,network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed is deleted?</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getnotifications(page:pagesize:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getnotifications(page:pagesize:completed:)">get​Notifications(page:​page​Size:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getNotifications</span>(<span class="variable">page</span>:<span class="type">Int</span>,<span class="variable">pageSize</span>:<span class="type">Int</span> = <span class="number literal">10</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/UserNotification"><span class="type">UserNotification</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get list of user notifications</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>page</th>
+    <td><code class="type">Int</code></td>
+    <td><p>page Int</p>
+</td>
+</tr>
+<tr>
+    <th>page​Size</th>
+    <td><code class="type">Int</code></td>
+    <td><p>page size</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[User​Notification],network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed arr of user notifications</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.createnewgroup(name:desc:privacy:intersetsids:image:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.createnewgroup(name:desc:privacy:intersetsids:image:completed:)">create​New​Group(name:​desc:​privacy:​intersets​IDs:​image:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createNewGroup</span>(<span class="variable">name</span>:<span class="type">String</span>,<span class="variable">desc</span>:<span class="type">String</span>,<span class="variable">privacy</span>:<span class="type">String</span> = <span class="string literal">"</span><span class="string literal">PUBLIC</span><span class="string literal">"</span>,<span class="variable">intersetsIDs</span>:[<span class="type">Int</span>],<span class="variable">image</span>:<a href="/Media"><span class="type">Media</span></a>? = <span class="keyword">nil</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/Group"><span class="type">Group</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>create new group</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>name</th>
+    <td><code class="type">String</code></td>
+    <td><p>group name</p>
+</td>
+</tr>
+<tr>
+    <th>desc</th>
+    <td><code class="type">String</code></td>
+    <td><p>group desc</p>
+</td>
+</tr>
+<tr>
+    <th>privacy</th>
+    <td><code class="type">String</code></td>
+    <td><p>privacy</p>
+</td>
+</tr>
+<tr>
+    <th>intersets​IDs</th>
+    <td><code class="type">[Int]</code></td>
+    <td><p>arr of interests</p>
+</td>
+</tr>
+<tr>
+    <th>image</th>
+    <td><code class="type">Media?</code></td>
+    <td><p>image of group</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Group,network​Error&gt;)-&gt;()</code></td>
+    <td><p>group object</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.getgroupintersts(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.getgroupintersts(completed:)">get​Group​Intersts(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getGroupIntersts</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="/Interst"><span class="type">Interst</span></a>],<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get group intersts</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;[Interst],network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed arr of interrests</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.joingroup(groupid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.joingroup(groupid:completed:)">join​Group(group​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">joinGroup</span>(<span class="variable">groupID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="keyword">Any</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>join group</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>group​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>group ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Any,network​Error&gt;)-&gt;()</code></td>
+    <td><p>completed resuly</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.leavegroup(groupid:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.leavegroup(groupid:completed:)">leave​Group(group​ID:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">leaveGroup</span>(<span class="variable">groupID</span>:<span class="type">Int</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="keyword">Any</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>leave group</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>group​ID</th>
+    <td><code class="type">Int</code></td>
+    <td><p>group ID</p>
+</td>
+</tr>
+<tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Any,network​Error&gt;)-&gt;()</code></td>
+    <td><p>result</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.processnetworkrequest(httpmethod:urlsuffix:requestheader:requestbody:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.processnetworkrequest(httpmethod:urlsuffix:requestheader:requestbody:completed:)">process​Network​Request(http​Method:​url​Suffix:​request​Header:​request​Body:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">processNetworkRequest</span>&lt;<span class="variable">T</span>:<span class="type">Codable</span>&gt;(<span class="variable">httpMethod</span>:<a href="/HttpsMethods"><span class="type">HttpsMethods</span></a> = .<span class="variable">get</span>,<span class="variable">urlSuffix</span>:<span class="type">String</span>,<span class="variable">requestHeader</span>:[<span class="type">String</span> : <span class="type">String</span>]? = <span class="keyword">nil</span>,<span class="variable">requestBody</span>:<span class="type">Data</span>? = <span class="keyword">nil</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">T</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>low level API handler</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>httpMethod: connection method</p>
+</li>
+<li>
+<p>urlSuffix: url</p>
+</li>
+<li>
+<p>requestBody: body data</p>
+</li>
+<li>
+<p>requestHeader: header components.</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.processnetworkrequestwithoutreturntype(httpmethod:urlsuffix:requestheader:requestbody:completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.processnetworkrequestwithoutreturntype(httpmethod:urlsuffix:requestheader:requestbody:completed:)">process​Network​Request​Without​Return​Type(http​Method:​url​Suffix:​request​Header:​request​Body:​completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">processNetworkRequestWithoutReturnType</span>(<span class="variable">httpMethod</span>:<a href="/HttpsMethods"><span class="type">HttpsMethods</span></a> = .<span class="variable">get</span>,<span class="variable">urlSuffix</span>:<span class="type">String</span>,<span class="variable">requestHeader</span>:[<span class="type">String</span> : <span class="type">String</span>]? = <span class="keyword">nil</span>,<span class="variable">requestBody</span>:<span class="type">Data</span>? = <span class="keyword">nil</span>,<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="keyword">Any</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>low level API handler</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>httpMethod: connection method</p>
+</li>
+<li>
+<p>urlSuffix: url</p>
+</li>
+<li>
+<p>requestBody: body data</p>
+</li>
+<li>
+<p>requestHeader: header components.</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="sunetworkmanager.updateusertokenonstart(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.updateusertokenonstart(completed:)">Update​User​Token​OnStart(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>  <span class="keyword">func</span> <span class="function">UpdateUserTokenOnStart</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="/UserToken"><span class="type">UserToken</span></a>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>update user data when start  refresh acccess token and son on.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;User​Token,network​Error&gt;)-&gt;()</code></td>
+    <td><p>user token</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.currentuserdata(completed:)">
+    <h3>
+        <code><a href="#sunetworkmanager.currentuserdata(completed:)">current​User​Data(completed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>  <span class="keyword">func</span> <span class="function">currentUserData</span>(<span class="variable">completed</span>:<span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Bool</span>,<span class="type">networkError</span>&gt;)-&gt;()) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>get current user</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>completed</th>
+    <td><code class="type">@escaping (Result&lt;Bool,network​Error&gt;)-&gt;()</code></td>
+    <td><p>is saved</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="sunetworkmanager.savenewtokenlocaly(token:)">
+    <h3>
+        <code><a href="#sunetworkmanager.savenewtokenlocaly(token:)">save​New​Token​Localy(token:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">saveNewTokenLocaly</span>(<span class="variable">token</span>:<a href="/UserToken"><span class="type">UserToken</span></a>)-&gt;<span class="type">Bool</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>save token sin local keyChain</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>token</th>
+    <td><code class="type">User​Token</code></td>
+    <td><p>token</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>isSaved:Bool</p>
+
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-02-13T14:48:30+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

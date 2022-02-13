@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#helper.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#helper.shared">shared</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#helper.createtabbar()">create​Tabbar()</a></li><li class="function"><a href="#helper.createhome()">create​Home()</a></li><li class="function"><a href="#helper.creatconnect()">creat​Connect()</a></li><li class="function"><a href="#helper.createaccount()">create​Account()</a></li><li class="function"><a href="#helper.createlearn()">create​Learn()</a></li><li class="function"><a href="#helper.createmission()">create​Mission()</a></li></ul></li></ol>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#helper.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#helper.shared">shared</a></li><li class="variable"><a href="#helper.currenttabbar">current​Tab​Bar</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#helper.createtabbar()">create​Tabbar()</a></li><li class="function"><a href="#helper.createhome()">create​Home()</a></li><li class="function"><a href="#helper.creatconnect()">creat​Connect()</a></li><li class="function"><a href="#helper.createsearch()">create​Search()</a></li><li class="function"><a href="#helper.createlearn()">create​Learn()</a></li><li class="function"><a href="#helper.createmission()">create​Mission()</a></li><li class="function"><a href="#helper.viewlikesvc(likes:)">view​Likes​VC(likes:​)</a></li><li class="function"><a href="#helper.showcommentsvc(post:)">show​Comments​VC(post:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -63,6 +63,14 @@
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">shared</span>  </body></html></code></pre>
 </div>
 </div>
+<div role="article" class="variable" id="helper.currenttabbar">
+    <h3>
+        <code><a href="#helper.currenttabbar">current​Tab​Bar</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">currentTabBar</span>:<a href="/SUTabBarController"><span class="type">SUTabBarController</span></a>? </body></html></code></pre>
+</div>
+</div>
     </section>
     <section id="methods">
         <h2>Methods</h2>
@@ -72,7 +80,7 @@
         <code><a href="#helper.createtabbar()">create​Tabbar()</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createTabbar</span>() -&gt; <span class="type">UITabBarController</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createTabbar</span>() -&gt; <span class="type">UIViewController</span></body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="helper.createhome()">
@@ -91,12 +99,12 @@
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">creatConnect</span>() -&gt; <span class="type">UIViewController</span>  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="helper.createaccount()">
+<div role="article" class="function" id="helper.createsearch()">
     <h3>
-        <code><a href="#helper.createaccount()">create​Account()</a></code>
+        <code><a href="#helper.createsearch()">create​Search()</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createAccount</span>() -&gt; <span class="type">UIViewController</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createSearch</span>() -&gt; <span class="type">UIViewController</span>  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="helper.createlearn()">
@@ -115,6 +123,22 @@
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">createMission</span>() -&gt; <span class="type">UIViewController</span>  </body></html></code></pre>
 </div>
 </div>
+<div role="article" class="function" id="helper.viewlikesvc(likes:)">
+    <h3>
+        <code><a href="#helper.viewlikesvc(likes:)">view​Likes​VC(likes:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">viewLikesVC</span>(<span class="variable">likes</span>:[<a href="/PostLike"><span class="type">PostLike</span></a>]) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="helper.showcommentsvc(post:)">
+    <h3>
+        <code><a href="#helper.showcommentsvc(post:)">show​Comments​VC(post:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">showCommentsVC</span>(<span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>) </body></html></code></pre>
+</div>
+</div>
     </section>
 
 
@@ -124,7 +148,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-12-20T11:57:23+0200">December 20, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-02-13T14:48:30+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

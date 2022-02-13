@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpirUp - KeychainHelper</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SpirUp
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#keychainhelper.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#keychainhelper.standard">standard</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#keychainhelper.save(_:service:account:)">save(_:​service:​account:​)</a></li><li class="function"><a href="#keychainhelper.read(service:account:type:)">read(service:​account:​type:​)</a></li><li class="function"><a href="#keychainhelper.delete(service:account:)">delete(service:​account:​)</a></li><li class="function"><a href="#keychainhelper.save(_:service:account:)">save(_:​service:​account:​)</a></li><li class="function"><a href="#keychainhelper.read(service:account:)">read(service:​account:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Keychain​Helper</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">final</span> <span class="keyword">class</span> <span class="type">KeychainHelper</span>  </body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="keychainhelper.init()">
+    <h3>
+        <code><a href="#keychainhelper.init()">init()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">init</span>()  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="keychainhelper.standard">
+    <h3>
+        <code><a href="#keychainhelper.standard">standard</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">standard</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="keychainhelper.save(_:service:account:)">
+    <h3>
+        <code><a href="#keychainhelper.save(_:service:account:)">save(_:​service:​account:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">save</span>&lt;<span class="variable">T</span>&gt;(<span class="keyword">_</span> <span class="variable">item</span>: <span class="type">T</span>, <span class="variable">service</span>: <span class="type">String</span>, <span class="variable">account</span>: <span class="type">String</span>) -&gt;(<span class="type">Bool</span>)<span class="keyword">where</span> <span class="type">T</span> : <span class="type">Codable</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="keychainhelper.read(service:account:type:)">
+    <h3>
+        <code><a href="#keychainhelper.read(service:account:type:)">read(service:​account:​type:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">read</span>&lt;<span class="variable">T</span>&gt;(<span class="variable">service</span>: <span class="type">String</span>, <span class="variable">account</span>: <span class="type">String</span>, <span class="variable">type</span>: <span class="type">T</span>.<span class="type">Type</span>) -&gt; <span class="type">T</span>? <span class="keyword">where</span> <span class="type">T</span>:<span class="type">Codable</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="keychainhelper.delete(service:account:)">
+    <h3>
+        <code><a href="#keychainhelper.delete(service:account:)">delete(service:​account:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">delete</span>(<span class="variable">service</span>: <span class="type">String</span>, <span class="variable">account</span>: <span class="type">String</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="keychainhelper.save(_:service:account:)">
+    <h3>
+        <code><a href="#keychainhelper.save(_:service:account:)">save(_:​service:​account:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">save</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">service</span>: <span class="type">String</span>, <span class="variable">account</span>: <span class="type">String</span>)<span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="keychainhelper.read(service:account:)">
+    <h3>
+        <code><a href="#keychainhelper.read(service:account:)">read(service:​account:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">read</span>(<span class="variable">service</span>: <span class="type">String</span>, <span class="variable">account</span>: <span class="type">String</span>) -&gt; <span class="type">Data</span>?  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-02-13T14:48:30+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
