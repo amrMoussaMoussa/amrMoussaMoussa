@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#postcell.init(frame:)">init(frame:​)</a></li><li class="initializer"><a href="#postcell.init?(coder:)">init?(coder:​)</a></li><li class="initializer"><a href="#postcell.init(frame:)">init(frame:​)</a></li><li class="initializer"><a href="#postcell.init?(coder:)">init?(coder:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#postcell.cellid">cell​ID</a></li><li class="variable"><a href="#postcell.post">post</a></li><li class="variable"><a href="#postcell.cellid">cell​ID</a></li><li class="variable"><a href="#postcell.postview">post​View</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#postcell.prepareforreuse()">prepare​For​Reuse()</a></li><li class="function"><a href="#postcell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#postcell.updateitem(item:)">update​Item(item:​)</a></li><li class="function"><a href="#postcell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#postcell.updateitem(item:)">update​Item(item:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#postcell.init(frame:)">init(frame:​)</a></li><li class="initializer"><a href="#postcell.init?(coder:)">init?(coder:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#postcell.cellid">cell​ID</a></li><li class="variable"><a href="#postcell.post">post</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#postcell.prepareforreuse()">prepare​For​Reuse()</a></li><li class="function"><a href="#postcell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#postcell.updateitem(item:)">update​Item(item:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -37,7 +37,7 @@
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">class</span> <a href="/PostCell"><span class="type">PostCell</span></a>: <span class="type">AMCollectionViewCell</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">PostCell</span>: <span class="type">AMCollectionViewCell</span>  </body></html></code></pre>
 </div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
@@ -82,29 +82,12 @@
         <h3>Conforms To</h3>
 <dl>
     <dt class="unknown"><code>AMCollectionViewCell</code></dt>
-<dt class="unknown"><code>AMCollectionViewCell</code></dt>
 </dl>
 </section>
     <section id="initializers">
         <h2>Initializers</h2>
 
         <div role="article" class="initializer" id="postcell.init(frame:)">
-    <h3>
-        <code><a href="#postcell.init(frame:)">init(frame:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="attribute">override</span> <span class="keyword">init</span>(<span class="variable">frame</span>: <span class="type">CGRect</span>)  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="initializer" id="postcell.init?(coder:)">
-    <h3>
-        <code><a href="#postcell.init?(coder:)">init?(coder:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="attribute">required</span> <span class="keyword">init</span>?(<span class="variable">coder</span>: <span class="type">NSCoder</span>)  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="initializer" id="postcell.init(frame:)">
     <h3>
         <code><a href="#postcell.init(frame:)">init(frame:​)</a></code>
     </h3>
@@ -138,22 +121,6 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">post</span>:<a href="/Post"><span class="type">Post</span></a>? </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="postcell.cellid">
-    <h3>
-        <code><a href="#postcell.cellid">cell​ID</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">cellID</span>: <span class="type">String</span> = <span class="string literal">"</span><span class="string literal">PostCell</span><span class="string literal">"</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="postcell.postview">
-    <h3>
-        <code><a href="#postcell.postview">post​View</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">postView</span>:<a href="/PostContentView"><span class="type">PostContentView</span></a>  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -207,22 +174,6 @@
   </tbody>
 </table>
 </div>
-<div role="article" class="function" id="postcell.configurelyout()">
-    <h3>
-        <code><a href="#postcell.configurelyout()">configure​Lyout()</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">configureLyout</span>() </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="postcell.updateitem(item:)">
-    <h3>
-        <code><a href="#postcell.updateitem(item:)">update​Item(item:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">updateItem</span>(<span class="variable">item</span>: <span class="type">Codable</span>)  </body></html></code></pre>
-</div>
-</div>
     </section>
 
 
@@ -232,7 +183,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2022-02-13T14:48:30+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-02-17T08:15:46+0200">February 17, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

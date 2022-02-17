@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#course.id">id</a></li><li class="variable"><a href="#course.videocompletedcount">video​Completed​Count</a></li><li class="variable"><a href="#course.name">name</a></li><li class="variable"><a href="#course.imageurl">image​Url</a></li><li class="variable"><a href="#course.playlistlink">playlist​Link</a></li><li class="variable"><a href="#course.videocount">video​Count</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#course.id">id</a></li><li class="variable"><a href="#course.videocompletedcount">video​Completed​Count</a></li><li class="variable"><a href="#course.name">name</a></li><li class="variable"><a href="#course.imageurl">image​Url</a></li><li class="variable"><a href="#course.playlistlink">playlist​Link</a></li><li class="variable"><a href="#course.videocount">video​Count</a></li></ul></li><li><a href="#operators">Operators</a><ul><li class="function"><a href="#course.==">==</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -37,7 +37,7 @@
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">Course</span>:<span class="type">Codable</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">Course</span>:<span class="type">Codable</span>,<span class="type">Equatable</span></body></html></code></pre>
 </div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
@@ -61,17 +61,29 @@
 </a>
 </g>
 </g>
-<!-- Codable -->
+<!-- Equatable -->
 <g id="node2" class="node unknown">
+<title>Equatable</title>
+<path fill="none" stroke="black" d="M303,-36C303,-36 111,-36 111,-36 105,-36 99,-30 99,-24 99,-24 99,-12 99,-12 99,-6 105,0 111,0 111,0 303,0 303,0 309,0 315,-6 315,-12 315,-12 315,-24 315,-24 315,-30 309,-36 303,-36"/>
+<text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00">Equatable</text>
+</g>
+<!-- Course&#45;&gt;Equatable -->
+<g id="edge2" class="edge conformsTo">
+<title>Course&#45;&gt;Equatable</title>
+<path fill="none" stroke="black" d="M377.25,-71.97C345.4,-62.06 305.08,-49.51 271.67,-39.12"/>
+<polygon fill="black" stroke="black" points="272.59,-35.74 262,-36.11 270.51,-42.42 272.59,-35.74"/>
+</g>
+<!-- Codable -->
+<g id="node3" class="node unknown">
 <title>Codable</title>
-<path fill="none" stroke="black" d="M528,-36C528,-36 336,-36 336,-36 330,-36 324,-30 324,-24 324,-24 324,-12 324,-12 324,-6 330,0 336,0 336,0 528,0 528,0 534,0 540,-6 540,-12 540,-12 540,-24 540,-24 540,-30 534,-36 528,-36"/>
-<text text-anchor="middle" x="432" y="-14.3" font-family="Menlo" font-size="14.00">Codable</text>
+<path fill="none" stroke="black" d="M753,-36C753,-36 561,-36 561,-36 555,-36 549,-30 549,-24 549,-24 549,-12 549,-12 549,-6 555,0 561,0 561,0 753,0 753,0 759,0 765,-6 765,-12 765,-12 765,-24 765,-24 765,-30 759,-36 753,-36"/>
+<text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00">Codable</text>
 </g>
 <!-- Course&#45;&gt;Codable -->
 <g id="edge1" class="edge conformsTo">
 <title>Course&#45;&gt;Codable</title>
-<path fill="none" stroke="black" d="M432,-71.7C432,-63.98 432,-54.71 432,-46.11"/>
-<polygon fill="black" stroke="black" points="435.5,-46.1 432,-36.1 428.5,-46.1 435.5,-46.1"/>
+<path fill="none" stroke="black" d="M486.75,-71.97C518.6,-62.06 558.92,-49.51 592.33,-39.12"/>
+<polygon fill="black" stroke="black" points="593.49,-42.42 602,-36.11 591.41,-35.74 593.49,-42.42"/>
 </g>
 </g>
 </svg>
@@ -82,6 +94,7 @@
         <h3>Conforms To</h3>
 <dl>
     <dt class="unknown"><code>Codable</code></dt>
+<dt class="unknown"><code>Equatable</code></dt>
 </dl>
 </section>
     <section id="properties">
@@ -136,6 +149,18 @@
 </div>
 </div>
     </section>
+    <section id="operators">
+        <h2>Operators</h2>
+
+        <div role="article" class="function" id="course.==">
+    <h3>
+        <code><a href="#course.==">==</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> == (<span class="variable">lhs</span>: <a href="/Course"><span class="type">Course</span></a>, <span class="variable">rhs</span>: <a href="/Course"><span class="type">Course</span></a>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
 
 
 
@@ -144,7 +169,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2022-02-13T14:48:29+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-02-17T08:15:46+0200">February 17, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

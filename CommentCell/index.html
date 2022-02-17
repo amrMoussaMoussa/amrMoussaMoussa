@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#commentcell.init(frame:)">init(frame:​)</a></li><li class="initializer"><a href="#commentcell.init?(coder:)">init?(coder:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#commentcell.cellid">cell​ID</a></li><li class="variable"><a href="#commentcell.post">post</a></li><li class="variable"><a href="#commentcell.comment">comment</a></li><li class="variable"><a href="#commentcell.editdelegate">edit​Delegate</a></li><li class="variable"><a href="#commentcell.useravatarimage">user​Avatar​Image</a></li><li class="variable"><a href="#commentcell.editbutton">edit​Button</a></li><li class="variable"><a href="#commentcell.commenttv">comment​TV</a></li><li class="variable"><a href="#commentcell.editmenu">edit​Menu</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#commentcell.prepareforreuse()">prepare​For​Reuse()</a></li><li class="function"><a href="#commentcell.layoutsubviews()">layout​Subviews()</a></li><li class="function"><a href="#commentcell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#commentcell.updateitem(item:)">update​Item(item:​)</a></li><li class="function"><a href="#commentcell.configureeditmenu()">Configure​Edit​Menu()</a></li><li class="function"><a href="#commentcell.deletecomment()">delete​Comment()</a></li><li class="function"><a href="#commentcell.hidecomment()">hide​Comment()</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#commentcell.init(frame:)">init(frame:​)</a></li><li class="initializer"><a href="#commentcell.init?(coder:)">init?(coder:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#commentcell.cellid">cell​ID</a></li><li class="variable"><a href="#commentcell.post">post</a></li><li class="variable"><a href="#commentcell.comment">comment</a></li><li class="variable"><a href="#commentcell.editdelegate">edit​Delegate</a></li><li class="variable"><a href="#commentcell.useravatarimage">user​Avatar​Image</a></li><li class="variable"><a href="#commentcell.editbutton">edit​Button</a></li><li class="variable"><a href="#commentcell.commenttv">comment​TV</a></li><li class="variable"><a href="#commentcell.editmenu">edit​Menu</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#commentcell.prepareforreuse()">prepare​For​Reuse()</a></li><li class="function"><a href="#commentcell.layoutsubviews()">layout​Subviews()</a></li><li class="function"><a href="#commentcell.configurelyout()">configure​Lyout()</a></li><li class="function"><a href="#commentcell.updateitem(item:)">update​Item(item:​)</a></li><li class="function"><a href="#commentcell.configureeditmenu()">Configure​Edit​Menu()</a></li><li class="function"><a href="#commentcell.deletecomment()">delete​Comment()</a></li><li class="function"><a href="#commentcell.hidecomment()">hide​Comment()</a></li><li class="function"><a href="#commentcell.editcomment()">edit​Comment()</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -136,7 +136,7 @@
         <code><a href="#commentcell.editdelegate">edit​Delegate</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">editDelegate</span>:<a href="/CommentCellEdited"><span class="type">CommentCellEdited</span></a>? </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">editDelegate</span>:<a href="/CommentCellUpdated"><span class="type">CommentCellUpdated</span></a>? </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="commentcell.useravatarimage">
@@ -231,6 +231,14 @@
 <pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">hideComment</span>() </body></html></code></pre>
 </div>
 </div>
+<div role="article" class="function" id="commentcell.editcomment()">
+    <h3>
+        <code><a href="#commentcell.editcomment()">edit​Comment()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">editComment</span>() </body></html></code></pre>
+</div>
+</div>
     </section>
 
 
@@ -240,7 +248,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2022-02-13T14:48:30+0200">February 13, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-02-17T08:15:46+0200">February 17, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
